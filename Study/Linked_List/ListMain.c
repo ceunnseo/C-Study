@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "ArrayList.h"
+#include "ArrayList.c"
+
 int main(void)
 {
   List list;
@@ -12,11 +14,12 @@ int main(void)
   LInsert(&list, 22);
   LInsert(&list, 33);
 
-  printf("현재 데이터의 수: %d \n", LCount(&list));
+  printf("현재 데이터 수: %d \n", LCount(&list));
 
   if (LFirst(&list, &data))
   {
     printf("%d ", data);
+
     while (LNext(&list, &data))
       printf("%d ", data);
   }
@@ -26,16 +29,19 @@ int main(void)
   {
     if (data == 22)
       LRemove(&list);
+
     while (LNext(&list, &data))
+    {
       if (data == 22)
         LRemove(&list);
+    }
   }
-
-  printf("현재 데이터의 수: %d\n", LCount(&list));
+  printf("현재 데이터 수: %d \n", LCount(&list));
 
   if (LFirst(&list, &data))
   {
     printf("%d ", data);
+
     while (LNext(&list, &data))
       printf("%d ", data);
   }

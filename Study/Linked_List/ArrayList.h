@@ -1,13 +1,13 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
-#define TRUE      1
-#define FALSE      1
+#define TRUE 1
+#define FALSE 0
 
-#define LIST_LEN    100
+#define LIST_LEN 100
 typedef int LData;
 
-typedef struct __ARRAY_LIST_H__
+typedef struct __ArrayList
 {
   LData arr[LIST_LEN];
   int numOfData;
@@ -16,14 +16,13 @@ typedef struct __ARRAY_LIST_H__
 
 typedef ArrayList List;
 
-void ListInit(List * plist);
-void LInsert(List * plist, LData data);
+void ListInit(List *plist);
+void LInsert(List *plist, LData data);
 
-int LFirst(List * plist, LData * pdata);
-int LNext(List * plist, LData * pdata);
+int LFirst(List *plist, LData *pdata);
+int LNext(List *plist, LData *pdata);
 
-LData LRemove(List * plist);
-int LCount(List * plist);
-
+LData LRemove(List *plist);
+int LCount(List *plist);
 
 #endif
