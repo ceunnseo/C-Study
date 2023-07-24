@@ -35,17 +35,6 @@ Node *reverseListF(Node *head, Node *cur, Node *tail)
   // tail = cur;
   // printf(" >> ");
 
-  // while (tail->val != head->val)
-  // {
-  //   cur = head;
-  //   while (cur->next != tail)
-  //     cur = cur->next;
-  //   printf("%d", tail->val);
-  //   tail->next = cur;
-  //   tail = cur;
-  //   printf(" >> ");
-  // }
-
   // while (1)
   // {
   //   if (tail->val == head->val)
