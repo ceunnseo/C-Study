@@ -11,7 +11,7 @@ int main(void)
   Enqueue(&q, 2);
   Enqueue(&q, 3);
   Enqueue(&q, 4);
-
+  printf("%d\n", QPeek(&q));
   while (!QIsEmpty(&q))
     printf("%d ", Dequeue(&q));
 
