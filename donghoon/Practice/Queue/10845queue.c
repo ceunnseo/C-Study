@@ -90,7 +90,7 @@ int main(void)
 {
   Queue q;
   QueueInit(&q);
-  char cmd[7];
+  char cmd[6];
   int n;
 
   scanf("%d", &n);
