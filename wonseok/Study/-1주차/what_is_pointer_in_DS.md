@@ -3,3 +3,24 @@
 1. 함수 이름은 그 자체가 주소이다.
 2. 간결한 코드를 만들 수 있다.
 3. 공동 작업에서 포인터 함수는 기준을 정해준다.
+
+```
+/*함수포인터
+*/
+#include <stdio.h>
+
+int test(int a)
+{
+	printf("test(): Hello World\n");
+	return 0;
+}
+
+int main(void)
+{
+	//test(5);
+	int (*pfTest)(int) = test; //함수 포인터 사용
+
+	pfTest(5);
+	return 0;
+}
+```
