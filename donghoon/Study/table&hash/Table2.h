@@ -10,7 +10,6 @@ typedef int HashFunc(Key k);
 
 typedef struct _table
 {
-  //	Slot tbl[MAX_TBL];
   List tbl[MAX_TBL];
   HashFunc *hf;
 } Table;
