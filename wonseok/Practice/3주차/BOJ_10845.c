@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -45,7 +46,7 @@ int empty()
 
 void push(int x)
 { 
-	bot = bot + 1;
+	bot = bot + 1; //초기값이 -1이므로
 	arr[bot] = x;
 }
 
@@ -55,7 +56,7 @@ int pop()
 		return -1;
 	else
 	{
-		int val = arr[top + 1];
+		int val = arr[top + 1]; //초기값이 -1이므로
 		top = top + 1;
 		return val;
 	}
