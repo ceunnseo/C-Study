@@ -5,25 +5,25 @@
 int main(void)
 {
   ALGraph graph;
-  GraphInit(&graph, 7);
+  GraphInit(&graph, 5);
 
   AddEdge(&graph, A, B);
+  AddEdge(&graph, A, C);
   AddEdge(&graph, A, D);
-  AddEdge(&graph, B, C);
-  AddEdge(&graph, D, C);
+  AddEdge(&graph, B, D);
   AddEdge(&graph, D, E);
-  AddEdge(&graph, E, F);
-  AddEdge(&graph, E, G);
 
   ShowGraphEdgeInfo(&graph);
 
   BFShowGraphVertex(&graph, A);
   printf("\n");
+  BFShowGraphVertex(&graph, B);
+  printf("\n");
   BFShowGraphVertex(&graph, C);
   printf("\n");
-  BFShowGraphVertex(&graph, E);
+  BFShowGraphVertex(&graph, D);
   printf("\n");
-  BFShowGraphVertex(&graph, G);
+  BFShowGraphVertex(&graph, E);
   printf("\n");
 
   GraphDestroy(&graph);

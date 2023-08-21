@@ -20,7 +20,7 @@ void GraphInit(ALGraph *pg, int nv)
   for (i = 0; i < nv; i++)
   {
     ListInit(&(pg->adjList[i]));
-    SetSortRule(&(pg->adjList[i]), WhoIsPrecede);
+    // SetSortRule(&(pg->adjList[i]), WhoIsPrecede);
   }
 
   pg->visitInfo = (int *)malloc(sizeof(int) * pg->numV);
@@ -93,6 +93,7 @@ void BFShowGraphVertex(ALGraph *pg, int startV)
   VisitVertex(pg, visitV);
   while (LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
   {
+    printf("starV : %c / nextV: %c\n", visitV + 65, nextV + 65);
     if (VisitVertex(pg, nextV) == TRUE)
       Enqueue(&queue, nextV);
     while (LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
