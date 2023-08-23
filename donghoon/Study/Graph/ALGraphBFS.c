@@ -93,7 +93,6 @@ void BFShowGraphVertex(ALGraph *pg, int startV)
   VisitVertex(pg, visitV);
   while (LFirst(&(pg->adjList[visitV]), &nextV) == TRUE)
   {
-    printf("starV : %c / nextV: %c\n", visitV + 65, nextV + 65);
     if (VisitVertex(pg, nextV) == TRUE)
       Enqueue(&queue, nextV);
     while (LNext(&(pg->adjList[visitV]), &nextV) == TRUE)
