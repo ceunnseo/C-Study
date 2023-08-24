@@ -20,7 +20,7 @@ void GraphInit(ALGraph *pg, int nv)
   for (i = 0; i < nv; i++)
   {
     ListInit(&(pg->adjList[i]));
-    // SetSortRule(&(pg->adjList[i]), WhoIsPrecede);
+    SetSortRule(&(pg->adjList[i]), WhoIsPrecede);
   }
 
   pg->visitInfo = (int *)malloc(sizeof(int) * pg->numV);
